@@ -12,7 +12,7 @@ const bannerBg ={
 };
 
 const verticalCenter ={
-    displayu :'flex',
+    display :'flex',
     alignItems : 'center',
     height: '450px'
     
