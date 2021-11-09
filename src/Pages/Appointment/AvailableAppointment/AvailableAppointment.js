@@ -53,6 +53,7 @@ const AvailableAppointment = ({date}) => {
                     <Booking
                       key={booking.id}
                       booking={booking}
+                      date={date}
                     >
 
                     </Booking>)
