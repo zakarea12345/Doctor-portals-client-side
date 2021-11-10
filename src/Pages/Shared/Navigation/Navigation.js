@@ -27,7 +27,7 @@ const Navigation = () => {
               <Typography variant="h6"     component="div" sx={{     flexGrow: 1 }}>
                 Doctors Portal
               </Typography>
-              <Link to="/appointment">
+              <Link style={{textDecoration:'none', color:'white'}} to="/appointment">
               <Button color="inherit">Appointment</Button>
               </Link>
            
