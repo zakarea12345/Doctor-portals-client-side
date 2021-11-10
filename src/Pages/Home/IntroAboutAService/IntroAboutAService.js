@@ -1,7 +1,7 @@
 import { Button, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import treatment from '../../../images/treatment.png';
-import './IntroAboutAService.css'
+
 
 
 const verticalCenter ={
@@ -29,7 +29,7 @@ const IntroAboutAService = () => {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nihil ut facere laudantium tempora a maxime nisi omnis necessitatibus atque quas ipsum, vitae minima commodi, debitis tenetur ab ipsam delectus!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nihil ut facere laudantium tempora a maxime nisi omnis necessitatibus atque quas ipsum, vitae minima commodi, debitis tenetur ab ipsam delectus!
                     </Typography>
-                    <Button variant="contained">Learn More</Button>
+                    <Button style={{textAlign:'center'}} variant="contained">Learn More</Button>
                 </Grid>
             </Grid>
         </Container>

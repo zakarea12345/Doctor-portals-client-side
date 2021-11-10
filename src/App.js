@@ -8,10 +8,12 @@ import Home from './Pages/Home/Home/Home';
 import Appointment from './Pages/Appointment/Appointment';
 import LogIn from './Pages/LogIn/LogIn';
 import Register from './Pages/LogIn/Register/Register';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
+import PrivateRoute from './Pages/LogIn/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <div className="App">
+    <AuthProvider>
        <Router>
          <Switch>
             <Route exact path="/">
@@ -20,9 +22,9 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/appointment">
+            <PrivateRoute path="/appointment">
               <Appointment />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <LogIn />
             </Route>
@@ -31,7 +33,7 @@ function App() {
             </Route>
           </Switch>
          </Router>
-    </div>
+    </AuthProvider>
   );
 }
 

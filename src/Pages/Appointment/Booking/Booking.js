@@ -13,7 +13,7 @@ const Booking = ({booking , date}) => {
     return (
         <>
         <Grid item xs={12} sm={6} md={4}>
-           <Paper elevation={3} sx={{py:5}}>
+           <Paper elevation={3} sx={{py:5}} style={{textAlign:'center'}}>
               <Typography variant="h5" gutterBottom component="div" sx={{ color: 'info.main' , fontWeight:600 }}>
                   {name}
               </Typography>

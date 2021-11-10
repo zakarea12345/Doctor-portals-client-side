@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import bg from '../../../images/bg.png';
@@ -16,6 +16,7 @@ const contactForm = {
 const Contact = () => {
     return (
         <Box style={contactForm} sx={{p:5}}>
+            <Container style={{textAlign:'center'}} >
             <Typography variant='h6' sx={{ color: 'info.main' }}>
                     Contact Us
             </Typography>
@@ -36,6 +37,8 @@ const Contact = () => {
             />
             <br />
             <Button variant='contained'>Submit</Button>
+
+            </Container>
         </Box>
     );
 };
