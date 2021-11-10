@@ -6,10 +6,14 @@ import useAuth from '../../Hooks/useAuth';
 import login from '../../images/login.png';
 
 const LogIn = () => {
-    const {loginUser, user, error ,isLoading, signInWithGoogle} = useAuth();
+    const {loginUser, user, error ,isLoading, signInWithGoogle, resetPassword} = useAuth();
     const [loginData, setLoginData] = useState({});
     const location = useLocation();
     const history = useHistory();
+
+    const handeForgotPassword = () =>{
+        resetPassword(loginData.email)
+    }
     
     const handleOnChange =  e => {
             const field = e.target.name;
@@ -38,7 +42,7 @@ const LogIn = () => {
                             id="standard-basic"
                             label="Your Email"
                             name="email"
-                            onChange={handleOnChange}
+                            onBlur={handleOnChange}
                             variant="standard" />
                         <TextField
                             sx={{ width: '75%', m: 1 }}
@@ -46,10 +50,14 @@ const LogIn = () => {
                             label="Your Password"
                             type="password"
                             name="password"
-                            onChange={handleOnChange}
+                            onBlur={handleOnChange}
                             variant="standard" />
 
+                        
                         <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                        <Link>
+                        <Button onClick={handeForgotPassword} type="submit"  sx={{ width: '75%', m: 1 }} variant="text">Forgot Password</Button>
+                        </Link>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/register">
@@ -59,6 +67,7 @@ const LogIn = () => {
                         {user?.email && <Alert severity="success">Login successfully!</Alert>}
                         {error && <Alert severity="error">{error}</Alert>}
                     </form>
+                    
                     <p>...............................................</p>
                     <Button onClick={handleGoogleSignIn} style={{width:'75%'}} variant="contained">Google Sign In</Button>
               </Grid>
